@@ -32,7 +32,7 @@ module.exports = {
 				try {
 					const latestValue = await CloudCannon.value(options?.valueOptions);
 					this.setState(latestValue);
-					this.refreshInterface()
+					CloudCannon.refreshInterface()
 				} catch(fetchError) {
 					console.warn('Failed to fetch latest page props', fetchError);
 				}
